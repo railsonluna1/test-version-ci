@@ -16,14 +16,4 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           package-path: ./package.json
-
-      - name: Generate Changelog
-        id: changelog
-        uses: jaywcjlove/changelog-generator@v1.3.9
-        if: steps.create_tag.outputs.successful
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          head-ref: ${{steps.create_tag.outputs.version}}
-          filter-author: (jaywcjlove|小弟调调™|dependabot\[bot\]|Renovate Bot)
-          filter: '[v|V]\d(\.\d+){0,2}'
-
+            filter: '[v|V]\d(\.\d+){0,2}'
