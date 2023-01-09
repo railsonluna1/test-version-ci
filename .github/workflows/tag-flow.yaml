@@ -9,9 +9,12 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@main
+
       - name: Create Tag
         id: create_tag
+        uses: actions/checkout@main
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           package-path: ./package.json
-            filter: '[v|V]\d(\.\d+){0,2}'
+
+
