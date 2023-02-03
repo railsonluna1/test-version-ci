@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.2.2](https://github.com/railsonluna1/test-version-ci/compare/v1.2.1...v1.2.2) (2023-02-03)
+
+
+### Bug Fixes
+
+* **test:** this is a commit ([2cd1e51](https://github.com/railsonluna1/test-version-ci/commit/2cd1e51961dd77ff12703ca8f8445964a4ae7708))
+* this is a commit ([bdeeabd](https://github.com/railsonluna1/test-version-ci/commit/bdeeabd0fe313651593bd955025e1ed502052190))
+
 ### [1.2.1](https://github.com/railsonluna1/test-version-ci/compare/v1.2.0...v1.2.1) (2023-02-03)
 
 
