@@ -1,20 +1,23 @@
-name: Build & Deploy
+name: Release version
+
 on:
   push:
-    branches:
-      - main
-
+    branches: ["main"]
 jobs:
-  build-deploy:
+  build:
     runs-on: ubuntu-18.04
+
     steps:
-      - uses: actions/checkout@main
-
-      - name: Create Tag
-        id: create_tag
-        uses: jaywcjlove/create-tag-action@v1.1.5
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          package-path: ./package.json
-
-
+      - uses: actions/checkout@v3
+      - name: Use Node.js ${{ matrix.node-version }}
+        run: |
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "GitHub Actions"
+      
+      - uses: actions/setup-node@v3
+      - name: Install dependencies
+        run: npm install
+        
+      - uses: actions/setup-node@v3
+      - name: Generate version
+        run: npm run release

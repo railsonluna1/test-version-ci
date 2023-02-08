@@ -1,11 +1,11 @@
 {
   "name": "test-version-ci",
-  "version": "1.0.15",
+  "version": "1.4.2",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "commit": "cz"
+    "release": "standard-version"
   },
   "repository": {
     "type": "git",
@@ -17,9 +17,11 @@
     "url": "https://github.com/railsonluna1/test-version-ci/issues"
   },
   "homepage": "https://github.com/railsonluna1/test-version-ci#readme",
-  "dependencies": {
-  },
   "devDependencies": {
+    "@commitlint/cli": "^17.4.2",
+    "@commitlint/config-conventional": "^17.4.2",
+    "husky": "^8.0.3",
+    "standard-version": "^9.5.0"
   },
   "config": {
     "commitizen": {
@@ -27,5 +29,3 @@
     }
   }
 }
-
-
